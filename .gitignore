@@ -1,0 +1,16 @@
+*.DS_Store
+*.ipynb_checkpoints
+token.pickle
+credentials.json
+*__pycache__
+*.pdf
+*.texpadtmp
+*generator.py
+*.swp
+*.swo
+train.csv
+quora_full_embeds.txt
+email_test
+email.log
+**/screenshots
+**/support

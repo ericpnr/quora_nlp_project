@@ -1,0 +1,31 @@
+{
+  "smoothing_method": "additive",
+  "smth_param": 1.0,
+  "cnvx_param": 0.5,
+  "scnd_smoother": null,
+  "0": {
+    "precision": 0.7714637146371464,
+    "recall": 0.6272,
+    "f1-score": 0.6918918918918919,
+    "support": 5000
+  },
+  "1": {
+    "precision": 0.6859309182813816,
+    "recall": 0.8142,
+    "f1-score": 0.7445816186556928,
+    "support": 5000
+  },
+  "accuracy": 0.7207,
+  "macro avg": {
+    "precision": 0.728697316459264,
+    "recall": 0.7207,
+    "f1-score": 0.7182367552737924,
+    "support": 10000
+  },
+  "weighted avg": {
+    "precision": 0.728697316459264,
+    "recall": 0.7207,
+    "f1-score": 0.7182367552737924,
+    "support": 10000
+  }
+}

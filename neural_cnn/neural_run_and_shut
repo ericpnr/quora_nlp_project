@@ -1,0 +1,25 @@
+#!/bin/bash
+
+read -ps "Yahoo Password:" PASS
+read -p "Commit Message:" COMMIT
+
+echo Starting Python Script
+source activate quora_work
+python neural_cnn_runs.py
+
+if [[ $? -eq 0 ]]; then
+	git add .
+	git commit -m "$COMMIT"
+	echo I AM DONE, SHUTTING DOWN
+	sendemail -l email.log  -f "xxxxxx@yahoo.com" \
+		-u "Instance-x CNN Run Complete" \
+		-t "epenner@berkeley.edu" \
+		-s "smtp.mail.yahoo.com:587" \
+		-o tls=yes \
+		-xu "xxxxx" \
+		-xp "$PASS" \
+		-o message-file="./neural_cnn_run_summary/most_recent_summary.txt"
+	sudo shutdown now
+elif [[ $? -ne 0 ]]; then
+	echo CNN RUN ENDED IN ERROR, WILL NOT SHUT DOWN
+fi
